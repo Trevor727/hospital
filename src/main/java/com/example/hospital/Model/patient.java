@@ -1,20 +1,28 @@
 package com.example.hospital.Model;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table (name = "patient")
 @SuppressWarnings("ALL")
 
 public class patient {
+   @Id
+   @Column(name="patient_id")
    private Long patient_id;
+   @Column(name="name")
    private String name;
+   @Column(name="age")
    private Long age;
+   @Column(name="gender")
    private String gender;
+   @Column(name="tel")
    private Long tel;
+   @Column(name="sicknessdetails")
    private String sicknessdetails;
 
+   @ManyToOne
+   private ward ward;
    public patient(Long patient_id, String name, Long age, String gender, Long tel, String sicknessdetails) {
       this.patient_id = patient_id;
       this.name = name;
@@ -70,5 +78,17 @@ public class patient {
 
    public void setSicknessdetails(String sicknessdetails) {
       this.sicknessdetails = sicknessdetails;
+   }
+
+   @Override
+   public String toString() {
+      return "patient{" +
+              "patient_id=" + patient_id +
+              ", name='" + name + '\'' +
+              ", age=" + age +
+              ", gender='" + gender + '\'' +
+              ", tel=" + tel +
+              ", sicknessdetails='" + sicknessdetails + '\'' +
+              '}';
    }
 }
