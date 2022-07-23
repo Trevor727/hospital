@@ -23,4 +23,52 @@ public class patient {
       this.tel = tel;
       this.sicknessdetails = sicknessdetails;
    }
+
+   public Long getPatient_id() {
+      return patient_id;
+   }
+
+   public void setPatient_id(Long patient_id) {
+      this.patient_id = patient_id;
+   }
+
+   public String getName() {
+      return name;
+   }
+
+   public void setName(String name) {
+      this.name = name;
+   }
+
+   public Long getAge() {
+      return age;
+   }
+
+   public void setAge(Long age) {
+      this.age = age;
+   }
+
+   public String getGender() {
+      return gender;
+   }
+
+   public void setGender(String gender) {
+      this.gender = gender;
+   }
+
+   public Long getTel() {
+      return tel;
+   }
+
+   public void setTel(Long tel) {
+      this.tel = tel;
+   }
+
+   public String getSicknessdetails() {
+      return sicknessdetails;
+   }
+
+   public void setSicknessdetails(String sicknessdetails) {
+      this.sicknessdetails = sicknessdetails;
+   }
 }
