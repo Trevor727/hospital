@@ -13,7 +13,7 @@ public class ward {
     @Column(name="ward_name")
     private String ward_name;
     @Column(name="ward_capacity")
-    private String ward_capacity;
+    private Long ward_capacity;
     @Column(name="ward_age")
     private Long ward_age;
     @Column(name="gender_category")
@@ -23,7 +23,7 @@ public class ward {
     @JoinColumn(name = "doctor_Id")
     private List<Doctor> doctor;
 
-    public ward(Long ward_id, String ward_name, String ward_capacity, Long ward_age, String gender_category) {
+    public ward(Long ward_id, String ward_name, Long ward_capacity, Long ward_age, String gender_category) {
         this.ward_id = ward_id;
         this.ward_name = ward_name;
         this.ward_capacity = ward_capacity;
@@ -47,11 +47,11 @@ public class ward {
         this.ward_name = ward_name;
     }
 
-    public String getWard_capacity() {
+    public Long getWard_capacity() {
         return ward_capacity;
     }
 
-    public void setWard_capacity(String ward_capacity) {
+    public void setWard_capacity(Long ward_capacity) {
         this.ward_capacity = ward_capacity;
     }
 
